@@ -13,5 +13,6 @@ window.addEventListener('load', function() {
     resized();
     window.onresize = resized;
 
+    glass.initialize(wgl);
     return;
 }, false);

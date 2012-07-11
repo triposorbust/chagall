@@ -2,7 +2,7 @@ if (!glass) {
     var glass = { };
 }
 
-glass.init_shaders = function(gl) {
+glass.initialize_shaders = function(gl) {
     if (this.attrs && this.unis) {
         return null;
     }
@@ -51,8 +51,13 @@ glass.init_shaders = function(gl) {
         program = wgl.createProgram();
         wgl.attachShader(program, fragmentShader);
         wgl.attachShader(program, vertexShader);
-        wgl.linkProgram(shaderProgram);
+        wgl.linkProgram(program);
 
+        if (!wgl.getProgramParameter(program, wgl.LINK_STATUS)) {
+            alert("could not initialise shaders");
+        }
+
+        wgl.useProgram(program);
         return program;
     }(gl);
 
