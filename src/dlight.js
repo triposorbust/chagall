@@ -7,13 +7,13 @@ glass.initialize_dlight = function() {
         return null;
     }
     this.dlight = function() {
-        var dX =  0.25;
-        var dY = -0.25;
-        var dZ =  0.35;
+        var dX =  0.15;
+        var dY = -0.15;
+        var dZ = -0.75;
 
-        var dR = 0.2;
-        var dG = 0.2;
-        var dB = 0.2;
+        var dR = 0.8;
+        var dG = 0.8;
+        var dB = 0.8;
 
         return {
             render: function(gl) {

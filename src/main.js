@@ -82,9 +82,9 @@ glass.initialize = function(gl) {
         return null;
     };
 
-    var xRot = 30.0;
-    var yRot = 30.0;
-    var xSpeed = 3.0;
+    var xRot = Math.PI/4;
+    var yRot = Math.PI/4;
+    var xSpeed = -3.0;
     var ySpeed = -3.0;
     var z = -5.0;
 
